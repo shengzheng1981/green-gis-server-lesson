@@ -7,13 +7,19 @@
 var app = require('../app');
 var debug = require('debug')('lesson01:server');
 var http = require('http');
+var mongoose = require('mongoose');
+var config = require('../config');
 
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || config.port || '3000');
 app.set('port', port);
+
+/**
+ * Connect mongodb.
+ */
+mongoose.connect(config.connection, { useNewUrlParser: true, autoReconnect: true, reconnectTries: 60, reconnectInterval: 5000  } );
 
 /**
  * Create HTTP server.
