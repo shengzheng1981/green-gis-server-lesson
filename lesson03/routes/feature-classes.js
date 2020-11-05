@@ -30,7 +30,7 @@ router.get('/all', (req, res, next) => {
 });
 
 /* 发布shapefile. */
-router.post('/publish/:name', extendTimeout, shape_upload.array('file'),  (req, res, next) => {
+router.post('/publish/shapefile/:name', extendTimeout, shape_upload.array('file'),  (req, res, next) => {
     // move the file from the temporary location to the intended location
     // 上传shapefile
     let shapefilename = "";

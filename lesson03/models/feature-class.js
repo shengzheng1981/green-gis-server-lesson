@@ -16,11 +16,7 @@ const FeatureClassSchema = new Schema({
     //static image
     image: Boolean,
     //fields list
-    fields:[{
-        name: String,
-        //gdal field type: integer64......
-        type: String
-    }]
+    fields:[]
 },{ collection: 'featureClasses' });
 const FeatureClass = mongoose.model('FeatureClass', FeatureClassSchema);
 
