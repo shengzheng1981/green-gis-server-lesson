@@ -30,7 +30,7 @@ const SymbolSchema = new Schema({
         lineWidth: Number,
         lineCap: String,
         lineJoin: String
-    }              
+    }
 });
 const Symbol = mongoose.model('Symbol', SymbolSchema);
 

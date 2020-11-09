@@ -15,6 +15,7 @@ router.get('/',  (req, res, next) => {
         });
 });
 
+// type/10
 router.get('/type/:type', (req, res, next) => {
     Symbol.find({ type: req.params.type}).lean()
         .exec( (err,docs) => {
