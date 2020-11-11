@@ -1,4 +1,5 @@
 {
     "connection": "mongodb://admin:GreenGIS123456@localhost:37020,localhost:37018/greengis?replicaSet=sw&authSource=admin",
-    "port": "4000"
+    "port": "4000",
+    "cors": true
 }
