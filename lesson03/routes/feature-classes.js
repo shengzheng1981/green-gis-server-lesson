@@ -79,7 +79,7 @@ router.post('/publish/shapefile/:name', extendTimeout, shape_upload.array('file'
                     const geometry = item.getGeometry();
                     // 转换坐标
                     geometry.transformTo(srs);
-                    // 计算空间索引
+                    // 计算切片索引
                     const feature = tile.calc({
                         geometry: JSON.parse(geometry.toJSON()),
                         properties: JSON.parse(item.fields.toJSON())
